@@ -10,6 +10,8 @@ module.exports = {
 	                        autoArchiveDuration: 60,
                         })
             console.log(`Created thread: ${thread.name} in ${message.channel}`)
+       }else{
+       		msg.reply(`${msg.content}`)
        }
   }
 } 
