@@ -11,7 +11,7 @@ module.exports = {
                         })
             console.log(`Created thread: ${thread.name} in ${message.channel}`)
        }else{
-       		msg.reply(`${msg.content}`)
+       		return
        }
   }
 } 
