@@ -30,7 +30,7 @@ module.exports = {
                      name: `${message.member.displayName}`
                  })
                  .setTimestamp()
-             await message.reply({embeds: [sugestionEmbed]}).then(sentEmbed => {
+             await message.reply({embeds: [suggestionEmbed]}).then(sentEmbed => {
                  sentEmbed.react("👍")
                  sentEmbed.react("👎")
                     message.startThread({
@@ -41,6 +41,6 @@ module.exports = {
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
-            }
+       }
   }
 } 
