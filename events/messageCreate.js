@@ -22,7 +22,7 @@ module.exports = {
 	    })
         })
             console.log(`Created thread in ${message.channel.name}`)
-       } else if(msg.channel.id === "863425084739158026"){
+       } else if(msg.channel.id === "959501807795732520"){
           const suggestionEmbed = new Discord.MessageEmbed()
                  .setColor('#00FFFF')
                  .setTitle(`Thanks for the suggestion ${message.member.displayName} ...Talk more about it in Thread`)
