@@ -135,7 +135,7 @@ module.exports = {
        } else if(msg.channel.id === "959478759814221896"){
           const ideaEmbed = new Discord.MessageEmbed()
                  .setColor('#00FFFF')
-                 .setTitle(`Good idea${message.member.displayName}`)
+                 .setTitle(`Good idea ${message.member.displayName}`)
                  .setAuthor({
                      name: `${message.member.displayName}`
                  })
@@ -148,6 +148,24 @@ module.exports = {
                       autoArchiveDuration: 60,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'idea'
+              })
+             })
+                 console.log(`Created thread in ${message.channel.name}`)
+       } else if(msg.channel.id === "959479046222249984"){
+          const jobEmbed = new Discord.MessageEmbed()
+                 .setColor('#00FFFF')
+                 .setTitle(`${message.member.displayName} wait for someone's reply in thread`)
+                 .setAuthor({
+                     name: `${message.member.displayName}`
+                 })
+                 .setTimestamp()
+             await message.reply({embeds: [jobEmbed]}).then(sentEmbed => {
+                 sentEmbed.react("👍")
+                    message.startThread({
+                      name: `job ${message.member.displayName}`,
+                      autoArchiveDuration: 60,
+                      type: 'GUILD_PUBLIC_THREAD',
+                      reason: 'job'
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
