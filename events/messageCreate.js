@@ -21,7 +21,7 @@ module.exports = {
             	reason: 'intro'
 	    })
         })
-            console.log(`Created thread: ${thread.name} in ${message.channel}`)
+            console.log(`Created thread in ${message.channel}`)
        }
   }
 } 
