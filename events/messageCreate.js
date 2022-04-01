@@ -63,7 +63,7 @@ module.exports = {
        } else if(msg.channel.id === "958622113374273596"){
           const helpEmbed = new Discord.MessageEmbed()
                  .setColor('#00FFFF')
-                 .setTitle(`${message.member.displayName} wait for someone to helpu in thread`)
+                 .setTitle(`${message.member.displayName} wait for someone to help you in thread`)
                  .setAuthor({
                      name: `${message.member.displayName}`
                  })
@@ -75,6 +75,24 @@ module.exports = {
                       autoArchiveDuration: 60,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'help'
+              })
+             })
+                 console.log(`Created thread in ${message.channel.name}`)
+       } else if(msg.channel.id === "863424771902275584"){
+          const disEmbed = new Discord.MessageEmbed()
+                 .setColor('#00FFFF')
+                 .setTitle(`${message.member.displayName} Discuss in thread`)
+                 .setAuthor({
+                     name: `${message.member.displayName}`
+                 })
+                 .setTimestamp()
+             await message.reply({embeds: [disEmbed]}).then(sentEmbed => {
+                 sentEmbed.react("🤔")
+                    message.startThread({
+                      name: `discuss ${message.member.displayName}`,
+                      autoArchiveDuration: 60,
+                      type: 'GUILD_PUBLIC_THREAD',
+                      reason: 'discuss'
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
