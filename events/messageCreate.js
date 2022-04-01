@@ -7,15 +7,15 @@ module.exports = {
         if(msg.channel.id === "958621708707856394"){
 	const introEmbed = new Discord.MessageEmbed()
             .setColor('#00FFFF')
-            .setTitle(`Welcome ${message.author.name} :wave::skin-tone-1:`)
+            .setTitle(`Welcome ${message.member.displayName} :wave::skin-tone-1:`)
             .setAuthor({
                 name: `${message.member.displayName}`
             })
             .setTimestamp()
         await message.reply({embeds: [introEmbed]}).then(sentEmbed => {
-            sentEmbed.react(":wave::skin-tone-1:")
+            sentEmbed.react("👋")
 	    message.startThread({
-	    	name: `intro ${message.author.name}`,
+	    	name: `intro ${message.member.displayName}`,
             	autoArchiveDuration: 60,
             	type: 'GUILD_PUBLIC_THREAD',
             	reason: 'intro'
