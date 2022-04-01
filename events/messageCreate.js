@@ -169,6 +169,25 @@ module.exports = {
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
+       } else if(msg.channel.id === "959478759814221896"){
+          const picEmbed = new Discord.MessageEmbed()
+                 .setColor('#00FFFF')
+                 .setTitle(`Nice click ${message.member.displayName} !`)
+                 .setAuthor({
+                     name: `${message.member.displayName}`
+                 })
+                 .setTimestamp()
+             await message.reply({embeds: [picEmbed]}).then(sentEmbed => {
+                 sentEmbed.react("👍")
+                 sentEmbed.react("👎")
+                    message.startThread({
+                      name: `pic ${message.member.displayName}`,
+                      autoArchiveDuration: 60,
+                      type: 'GUILD_PUBLIC_THREAD',
+                      reason: 'pic'
+              })
+             })
+                 console.log(`Created thread in ${message.channel.name}`)
        }
   }
 } 
