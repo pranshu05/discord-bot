@@ -169,7 +169,7 @@ module.exports = {
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
-       } else if(msg.channel.id === "959478759814221896"){
+       } else if(msg.channel.id === "959479592773615636"){
           const picEmbed = new Discord.MessageEmbed()
                  .setColor('#00FFFF')
                  .setTitle(`Nice click ${message.member.displayName} !`)
