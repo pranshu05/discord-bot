@@ -17,7 +17,6 @@ module.exports = {
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp()
 			.setFooter(`membercount : ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
-			})	
 		if(member.guild.id === "754381521854398595"){
 			member.guild.channels.cache.get("862296895665340467").send({
 				embeds: [newMemberEmbed] 
