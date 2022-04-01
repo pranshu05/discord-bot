@@ -1,24 +1,23 @@
 const Discord = require('discord.js')
-
 module.exports = {
 	name: "guildMemberRemove",
 	async execute(member) {
-
-		console.log(member.user)
-
-		const newMemberEmbed = new Discord.MessageEmbed()
+			console.log(`${member.user.username} left ${member.guild.name}`)
+			const newMemberEmbed = new Discord.MessageEmbed()
 			.setColor("00FFFF")
 			.setTitle("Member left")
-			.setDescription(`${member.user} had left the server`)
+			.setDescription(`${member.user} left the srver`)
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp()
+			.setFooter(`membercount : ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
+			member.guild.channels.cache.get(guildSettings.goodbye_channel_id).send({
+				embeds: [newMemberEmbed] 
+			})	
 		
 			if(member.guild.id === "754381521854398595"){
 				member.guild.channels.cache.get("926477966555381860").send({
 					embeds: [newMemberEmbed] 
 				})
-			}
-			
+			}	
 	}
-
 }
