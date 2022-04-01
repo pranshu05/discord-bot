@@ -132,6 +132,25 @@ module.exports = {
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
+       } else if(msg.channel.id === "959477229056823296"){
+          const ideaEmbed = new Discord.MessageEmbed()
+                 .setColor('#00FFFF')
+                 .setTitle(`Good idea${message.member.displayName}`)
+                 .setAuthor({
+                     name: `${message.member.displayName}`
+                 })
+                 .setTimestamp()
+             await message.reply({embeds: [ideaEmbed]}).then(sentEmbed => {
+                 sentEmbed.react("👍")
+                 sentEmbed.react("👎")
+                    message.startThread({
+                      name: `idea ${message.member.displayName}`,
+                      autoArchiveDuration: 60,
+                      type: 'GUILD_PUBLIC_THREAD',
+                      reason: 'idea'
+              })
+             })
+                 console.log(`Created thread in ${message.channel.name}`)
        }
   }
 } 
