@@ -7,7 +7,7 @@ module.exports = {
         if(msg.channel.id === "958621708707856394"){
 	const introEmbed = new Discord.MessageEmbed()
             .setColor('#00FFFF')
-            .setTitle(`Welcome ${message.author} :wave::skin-tone-1:`)
+            .setTitle(`Welcome ${message.author.name} :wave::skin-tone-1:`)
             .setAuthor({
                 name: `${message.member.displayName}`
             })
