@@ -12,7 +12,6 @@ module.exports = {
                 name: `${message.member.displayName}`
             })
             .setTimestamp()
-	    
         await message.reply({embeds: [introEmbed]}).then(sentEmbed => {
             sentEmbed.react(":wave::skin-tone-1:")
 	    message.startThread({
