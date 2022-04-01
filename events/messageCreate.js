@@ -132,7 +132,7 @@ module.exports = {
               })
              })
                  console.log(`Created thread in ${message.channel.name}`)
-       } else if(msg.channel.id === "959477229056823296"){
+       } else if(msg.channel.id === "959478759814221896"){
           const ideaEmbed = new Discord.MessageEmbed()
                  .setColor('#00FFFF')
                  .setTitle(`Good idea${message.member.displayName}`)
