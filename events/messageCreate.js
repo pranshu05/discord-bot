@@ -13,7 +13,7 @@ module.exports = {
             })
             .setTimestamp()
         await message.reply({embeds: [introEmbed]}).then(sentEmbed => {
-            sentEmbed.react("👋")
+            message.react("👋")
 	    message.startThread({
 	    	name: `intro ${message.member.displayName}`,
             	autoArchiveDuration: 60,
@@ -31,8 +31,8 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [suggestionEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
-                 sentEmbed.react("👎")
+                 message.react("👍")
+                 message.react("👎")
                     message.startThread({
                       name: `suggestion ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -50,8 +50,8 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [showEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
-                 sentEmbed.react("👎")
+                 message.react("👍")
+                 message.react("👎")
                     message.startThread({
                       name: `showcase ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -69,7 +69,7 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [helpEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("🤔")
+                 message.react("🤔")
                     message.startThread({
                       name: `help ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -87,7 +87,7 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [disEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("🤔")
+                 message.react("🤔")
                     message.startThread({
                       name: `discuss ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -105,7 +105,7 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [collabEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
+                 message.react("👍")
                     message.startThread({
                       name: `collaborate ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -123,7 +123,7 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [resEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
+                 message.react("👍")
                     message.startThread({
                       name: `resource ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -141,8 +141,8 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [ideaEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
-                 sentEmbed.react("👎")
+                 message.react("👍")
+                 message.react("👎")
                     message.startThread({
                       name: `idea ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -160,7 +160,7 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [jobEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
+                 message.react("👍")
                     message.startThread({
                       name: `job ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -178,8 +178,8 @@ module.exports = {
                  })
                  .setTimestamp()
              await message.reply({embeds: [picEmbed]}).then(sentEmbed => {
-                 sentEmbed.react("👍")
-                 sentEmbed.react("👎")
+                 message.react("👍")
+                 message.react("👎")
                     message.startThread({
                       name: `pic ${message.member.displayName}`,
                       autoArchiveDuration: 60,
@@ -197,7 +197,7 @@ module.exports = {
                })
                .setTimestamp()
            await message.reply({embeds: [winEmbed]}).then(sentEmbed => {
-               sentEmbed.react("🎉")
+               message.react("🎉")
                   message.startThread({
                     name: `win ${message.member.displayName}`,
                     autoArchiveDuration: 60,
