@@ -16,7 +16,7 @@ module.exports = {
             message.react("👋")
 	    message.startThread({
 	    	name: `intro ${message.member.displayName}`,
-            	autoArchiveDuration: 60,
+            	autoArchiveDuration: 1440,
             	type: 'GUILD_PUBLIC_THREAD',
             	reason: 'intro'
 	    })
@@ -35,7 +35,7 @@ module.exports = {
                  message.react("👎")
                     message.startThread({
                       name: `suggestion ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'suggestion'
               })
@@ -54,7 +54,7 @@ module.exports = {
                  message.react("👎")
                     message.startThread({
                       name: `showcase ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'showcase'
               })
@@ -72,7 +72,7 @@ module.exports = {
                  message.react("🤔")
                     message.startThread({
                       name: `help ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'help'
               })
@@ -90,7 +90,7 @@ module.exports = {
                  message.react("🤔")
                     message.startThread({
                       name: `discuss ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'discuss'
               })
@@ -108,7 +108,7 @@ module.exports = {
                  message.react("👍")
                     message.startThread({
                       name: `collaborate ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'collaborate'
               })
@@ -126,7 +126,7 @@ module.exports = {
                  message.react("👍")
                     message.startThread({
                       name: `resource ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'resource'
               })
@@ -145,7 +145,7 @@ module.exports = {
                  message.react("👎")
                     message.startThread({
                       name: `idea ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'idea'
               })
@@ -163,7 +163,7 @@ module.exports = {
                  message.react("👍")
                     message.startThread({
                       name: `job ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'job'
               })
@@ -182,7 +182,7 @@ module.exports = {
                  message.react("👎")
                     message.startThread({
                       name: `pic ${message.member.displayName}`,
-                      autoArchiveDuration: 60,
+                      autoArchiveDuration: 1440,
                       type: 'GUILD_PUBLIC_THREAD',
                       reason: 'pic'
               })
@@ -200,7 +200,7 @@ module.exports = {
                message.react("🎉")
                   message.startThread({
                     name: `win ${message.member.displayName}`,
-                    autoArchiveDuration: 60,
+                    autoArchiveDuration: 1440,
                     type: 'GUILD_PUBLIC_THREAD',
                     reason: 'win'
             })
