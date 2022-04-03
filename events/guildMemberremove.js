@@ -6,7 +6,7 @@ module.exports = {
 			const newMemberEmbed = new Discord.MessageEmbed()
 			.setColor("00FFFF")
 			.setTitle("Member left")
-			.setDescription(`${member.user} left the srver`)
+			.setDescription(`${member.user} left the server`)
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp()
 			.setFooter(`membercount : ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
