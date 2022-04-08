@@ -215,7 +215,7 @@ module.exports = {
                 })
             }
        } else if(msg.content.includes(`discord.gg`)){
-            if(message.member.hasPermission('MANAGE_MESSAGES')){
+            if(message.member.permissions.has('MANAGE_MESSAGES')){
                 return
             }else{
                 msg.channel.send(`${message.author} discord invites aren't allowed here`).then(abc=>{
