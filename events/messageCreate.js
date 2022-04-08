@@ -218,9 +218,6 @@ module.exports = {
                 })
             }
        } else if(msg.content === `discord.gg`){
-            if(msg.guild.members.cache.get(message.author.id).permissions.has([ Permissions.FLAGS.MANAGE_CHANNELS , Permissions.FLAGS.MANAGE_MESSAGES , Permissions.FLAGS.MANAGE_ROLES , Permissions.FLAGS.ADMINISTRATOR ])){
-                return
-            }else{
                 msg.reply({
                     content: `${message.author} discord invites aren't allowed here`,
                     ephemeral: true
@@ -228,7 +225,6 @@ module.exports = {
                     message.delete(message.id)
                     console.log(`deleted invite sent by ${msg.author.name} in ${msg.channel.name}`)
                 })
-            }
     }
   }
 } 
