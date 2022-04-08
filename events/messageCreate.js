@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const { Permissions} = require("discord.js")
+const Permissions = require("discord.js")
 module.exports = {
     name: "messageCreate",
     async execute(message){
@@ -218,7 +218,7 @@ module.exports = {
                 })
             }
        } else if(msg.content === `discord.gg`){
-            if(!msg.author.permissions.has([ Permissions.FLAGS.MANAGE_CHANNELS , Permissions.FLAGS.MANAGE_MESSAGES , Permissions.FLAGS.MANAGE_ROLES , Permissions.FLAGS.ADMINISTRATOR ])){
+            if(!msg.author.guild.members.cache.get(message.author.id).permissions.has([ Permissions.FLAGS.MANAGE_CHANNELS , Permissions.FLAGS.MANAGE_MESSAGES , Permissions.FLAGS.MANAGE_ROLES , Permissions.FLAGS.ADMINISTRATOR ])){
                 msg.reply({
                     content: `${message.author} discord invites aren't allowed here`,
                     ephemeral: true
