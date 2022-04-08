@@ -207,7 +207,7 @@ module.exports = {
            })
                console.log(`Created thread in ${message.channel.name}`)
        } else if(msg.channel.id === "852843876955717632"){
-            if(msg.content === `discord.gg`){
+            if(msg.content.includes(`discord.gg`)){
                 msg.reply({
                     content: `${message.author} discord invites aren't allowed here`,
                     ephemeral: true
@@ -216,6 +216,15 @@ module.exports = {
                     console.log(`deleted invite sent by ${msg.author}`)
                 })
             }
-       }
+       } else if(msg.content === `discord.gg`){
+
+        msg.reply({
+            content: `${message.author} discord invites aren't allowed here`,
+            ephemeral: true
+        }).then(abc =>{
+            msg.delete
+            console.log(`deleted invite sent by ${msg.author}`)
+        })
+    }
   }
 } 
