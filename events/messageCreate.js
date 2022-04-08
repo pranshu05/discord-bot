@@ -212,18 +212,20 @@ module.exports = {
                 msg.reply({
                     content: `${message.author} discord invites aren't allowed here`,
                     ephemeral: true
-                })
+                }).then(abc =>{
                     message.delete(message.id)
                     console.log(`deleted invite sent by ${msg.author.name}`)
+                })
             }
        } else if(msg.content === `discord.gg`){
             if(!msg.author.permissions.has([ Permissions.FLAGS.MANAGE_CHANNELS , Permissions.FLAGS.MANAGE_MESSAGES , Permissions.FLAGS.MANAGE_ROLES , Permissions.FLAGS.ADMINISTRATOR ])){
                 msg.reply({
                     content: `${message.author} discord invites aren't allowed here`,
                     ephemeral: true
-                })
+                }).then(abc=>{
                     message.delete(message.id)
                     console.log(`deleted invite sent by ${msg.author.name} in ${msg.channel.name}`)
+                })
             }else{
                 return
             }
