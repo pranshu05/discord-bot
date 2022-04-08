@@ -218,7 +218,7 @@ module.exports = {
                 })
             }
        } else if(msg.content.includes(`discord.gg`)){
-            if(msg.guild.members.cache.get(message.author.id).permissions.has([Permissions.FLAGS.MANAGE_MESSAGES])){
+            if(message.member.guild.me.hasPermmission('MANAGE_MESSAGES')){
                 return
             }else{
                 msg.reply({
