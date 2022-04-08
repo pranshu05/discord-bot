@@ -209,22 +209,16 @@ module.exports = {
                console.log(`Created thread in ${message.channel.name}`)
        } else if(msg.channel.id === "852843876955717632"){
             if(msg.content.includes(`discord.gg`)){
-                msg.reply({
-                    content: `${message.author} discord invites aren't allowed here`,
-                    ephemeral: true
-                }).then(abc =>{
+                msg.channel.send(`${message.author} discord invites aren't allowed here`).then(abc =>{
                     message.delete(message.id)
                     console.log(`deleted invite sent by ${msg.author.name}`)
                 })
             }
        } else if(msg.content.includes(`discord.gg`)){
-            if(message.member.guild.me.hasPermmission('MANAGE_MESSAGES')){
+            if(msg.author.hasPermission('MANAGE_MESSAGES')){
                 return
             }else{
-                msg.reply({
-                    content: `${message.author} discord invites aren't allowed here`,
-                    ephemeral: true
-                }).then(abc=>{
+                msg.channel.send(`${message.author} discord invites aren't allowed here`).then(abc=>{
                     message.delete(message.id)
                     console.log(`deleted invite sent by ${msg.author.name} in ${msg.channel.name}`)
                 })
