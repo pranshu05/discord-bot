@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const { Permissions} = require("discord.js")
 module.exports = {
     name: "messageCreate",
     async execute(message){
@@ -217,14 +218,17 @@ module.exports = {
                 })
             }
        } else if(msg.content === `discord.gg`){
-
-        msg.reply({
-            content: `${message.author} discord invites aren't allowed here`,
-            ephemeral: true
-        }).then(abc =>{
-            msg.delete
-            console.log(`deleted invite sent by ${msg.author}`)
-        })
+            if(!msg.author.permissions.has([ Permissions.FLAGS.MANAGE_CHANNELS , Permissions.FLAGS.MANAGE_MESSAGES , Permissions.FLAGS.MANAGE_ROLES , Permissions.FLAGS.ADMINISTRATOR ])){
+                msg.reply({
+                    content: `${message.author} discord invites aren't allowed here`,
+                    ephemeral: true
+                }).then(abc =>{
+                    msg.delete
+                    console.log(`deleted invite sent by ${msg.author} in ${msg.channel.name}`)
+                })
+            }else{
+                return
+            }
     }
   }
 } 
