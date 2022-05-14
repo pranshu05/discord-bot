@@ -40,16 +40,7 @@ client.on('ready' , client => {
     const embed = new Discord.MessageEmbed()
     .setTitle('Info about server')
     .setColor("00FFFF")
-    .setDescription('<#958621708707856394> \nChannel where you can Introduce yourself!')
-    .setDescription('<#863424771902275584> \nDiscuss about something just send a message and bot will make thread!')
-    .setDescription('<#958621553539579935> \nShowoff something cool you made! Talk more about it in thread')
-    .setDescription('<#959857903261581413> \nDone something cool or Achieved something? Just send a message!')
-    .setDescription('<#958622113374273596> \nLooking for help? Just send message in the channel....ppl will help you in thread')
-    .setDescription('<#959478549486649394> \nLooking for someone to collab with you? Just send message in the channel...Someone will reply in the thread :)')
-    .setDescription(`<#959477229056823296> \nHave some cool resources? Why don't send it in the channel`)
-    .setDescription('<#959478759814221896> \nHave a new idea to start with? Share it with others in the channel!')
-    .setDescription('<#959479046222249984> \nHiring someone OR looking for a job? Just send a message and discuss in thread!')
-
+    .setDescription(`<#958621708707856394> \nChannel where you can Introduce yourself! \n<#863424771902275584> \nDiscuss about something just send a message and bot will make thread! \n<#958621553539579935> \nShowoff something cool you made! Talk more about it in thread \n<#959857903261581413> \nDone something cool or Achieved something? Just send a message! \n<#958622113374273596> \nLooking for help? Just send message in the channel....ppl will help you in thread \n<#959478549486649394> \nLooking for someone to collab with you? Just send message in the channel...Someone will reply in the thread :) \n<#959477229056823296> \nHave some cool resources? Why don't send it in the channel \n<#959478759814221896> \nHave a new idea to start with? Share it with others in the channel! \n<#959479046222249984> \nHiring someone OR looking for a job? Just send a message and discuss in thread!`)
     client.channels.cache.get('974857251716210728').send({
         embeds: [embed] 
     })
