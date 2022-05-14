@@ -15,7 +15,7 @@ module.exports = {
             .setTimestamp()
         await message.reply({embeds: [introEmbed]}).then(sentEmbed => {
             message.react("👋")
-	    message.startThread({
+	     message.startThread({
 	    	name: `intro ${message.member.displayName}`,
             	autoArchiveDuration: 1440,
             	type: 'GUILD_PUBLIC_THREAD',
