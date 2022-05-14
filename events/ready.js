@@ -35,7 +35,7 @@ module.exports = {
         .addField('<#959478759814221896>', 'Have a new idea to start with? Share it with others in the channel!')
         .addField('<#959479046222249984>', 'Hiring someone OR looking for a job? Just send a message and discuss in thread!')
 
-        client.channels.cache.get(`974857251716210728`).send({
+        client.channels.cache.find(channel => channel.id === 974857251716210728 ).send({
             embeds: [embed] 
         })
 
