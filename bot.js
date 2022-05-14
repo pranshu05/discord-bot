@@ -39,6 +39,7 @@ client.on('ready' , client => {
 
     const embed = new Discord.MessageEmbed()
     .setTitle('Info about server')
+    .setColor("00FFFF")
     .addField('<#958621708707856394>', 'Channel where you can Introduce yourself!')
     .addField('<#863424771902275584>', 'Discuss about something just send a message and bot will make thread!')
     .addField('<#958621553539579935>', 'Showoff something cool you made! Talk more about it in thread')
