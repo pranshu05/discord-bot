@@ -223,6 +223,16 @@ module.exports = {
                     console.log(`deleted invite sent by ${msg.author.name} in ${msg.channel.name}`)
                 })
             }
+    } else if(msg.content.includes(`-r add read-it`)){
+            if(message.author.roles.find(r => r.name === "read-it-ping")){
+                message.author.removeRole(r => r.name === "read-it-ping")
+                message.reply(`Role was successfully removed!`)
+                console.log(`read-it role removed from ${message.author.name}`)
+            } else{
+                message.author.addRole(message.guild.roles.find(r => r.name === "read-it-ping"))
+                message.reply(`Successfully added the role \ntype *-r add read-it* again to undo it `)
+                console.log(`read-it role added to ${message.author.name}`)
+            }
     }
   }
 } 
