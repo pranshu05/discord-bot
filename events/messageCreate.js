@@ -225,7 +225,7 @@ module.exports = {
             }
     } else if(msg.content.includes(`-r add read-it`)){
             if(message.member.roles.cache.find(r => r.name === "read-it-ping")){
-                message.member.roles.remove(r => r.name === "read-it-ping")
+                message.member.roles.remove(message.member.roles.cache.find(r => r.name === "read-it-ping"))
                 message.reply(`Role was successfully removed!`)
                 console.log(`read-it role removed from ${message.author.name}`)
             } else{
