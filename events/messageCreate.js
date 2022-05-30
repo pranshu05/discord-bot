@@ -224,12 +224,12 @@ module.exports = {
                 })
             }
     } else if(msg.content.includes(`-r add read-it`)){
-            if(message.author.roles.cache.some(r => r.name === "read-it-ping")){
-                message.author.removeRole(r => r.name === "read-it-ping")
+            if(message.member.roles.cache.find(r => r.name === "read-it-ping")){
+                message.member.roles.remove(message.member.roles.cache.find(r => r.name === "read-it-ping"))
                 message.reply(`Role was successfully removed!`)
                 console.log(`read-it role removed from ${message.author.name}`)
             } else{
-                message.author.addRole(message.guild.roles.cache.some(r => r.name === "read-it-ping"))
+                message.member.roles.add(message.guild.roles.cache.find(r => r.name === "read-it-ping"))
                 message.reply(`Successfully added the role \ntype **-r add read-it** again to undo it `)
                 console.log(`read-it role added to ${message.author.name}`)
             }
