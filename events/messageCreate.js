@@ -171,23 +171,14 @@ module.exports = {
              })
                  console.log(`Created thread in ${message.channel.name}`)
        } else if(msg.channel.id === "959479592773615636"){
-          const picEmbed = new Discord.MessageEmbed()
-                 .setColor('#00FFFF')
-                 .setTitle(`Nice click ${message.member.displayName} !`)
-                 .setAuthor({
-                     name: `${message.member.displayName}`
-                 })
-                 .setTimestamp()
-             await message.reply({embeds: [picEmbed]}).then(sentEmbed => {
-                 message.react("👍")
-                 message.react("👎")
-                    message.startThread({
-                      name: `pic ${message.member.displayName}`,
-                      autoArchiveDuration: 1440,
-                      type: 'GUILD_PUBLIC_THREAD',
-                      reason: 'pic'
-              })
-             })
+        message.react("👍")
+        message.react("👎")
+           message.startThread({
+             name: `pic ${message.member.displayName}`,
+             autoArchiveDuration: 1440,
+             type: 'GUILD_PUBLIC_THREAD',
+             reason: 'pic'
+     })
                  console.log(`Created thread in ${message.channel.name}`)
        } else if(msg.channel.id === "959857903261581413"){
         const winEmbed = new Discord.MessageEmbed()
